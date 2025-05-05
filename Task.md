@@ -5,10 +5,9 @@ You are working as a DevOps Engineer for a cloud-native startup. Your team is bu
 Your task is to:
 
 1. Create a custom VNet named `aks-vnet` in the `East US` region.
-2. Create **two subnets** inside this VNet:
-   - `aks-subnet`: For AKS cluster nodes. ( 10.240.0.0/16)
-   - `app-subnet`: Reserved for future application services. ( 10.241.0.0/16 )
-3. Ensure both subnets are in the same address space but with **non-overlapping CIDRs**.
+2. Create **one subnets** inside this VNet:
+   - `aks-subnet`: For AKS cluster nodes. ( 10.1.0.0/24)
+3. Ensure the subnet in the same address space but with **non-overlapping CIDRs**.
 4. Create an AKS cluster named `prod-aks` using the `aks-subnet`.
 5. Ensure the AKS cluster uses the **Azure CNI** networking model so that pods get IPs from the subnet.
 6. Attach the AKS cluster to the existing VNet (not the default one).
